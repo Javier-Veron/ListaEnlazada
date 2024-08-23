@@ -1,24 +1,15 @@
 public class Nodo{
+    int valor = 0;
+    Nodo siguiente = null;
 
-
-    public void CrearNodo(int valor){
-
-        Nodo siguiente;
-        this.valor = valor;
-        this.siguiente = null;
-
-
-
-    }
-
-    public void CrearNodo(valor,siguiente){
-
-
-    }
-
-    public int Valor(){
+    public int valor(){
 
         return this.valor;
+    }
+
+    public Nodo siguiente(){
+
+        return this.siguiente;
     }
 
 
