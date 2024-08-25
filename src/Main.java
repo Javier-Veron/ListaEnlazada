@@ -15,5 +15,14 @@ public class Main {
         System.out.println(lista.buscar(10));
         System.out.println(lista.buscar(0));
 
+        lista.eliminar(20);
+
+        System.out.println(lista.buscar(5));
+        System.out.println(lista.buscar(20));
+        System.out.println(lista.buscar(10));
+        System.out.println(lista.buscar(0));
+
+        System.out.println(lista.tamanio());
+
     }
 }

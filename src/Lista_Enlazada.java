@@ -23,25 +23,28 @@ public class Lista_Enlazada{
 
     public boolean buscar(int valor){
         Nodo puntero = this.head;
-        boolean encontrado = false;
-        if (this.tamanio > 0) {
-            while ( !encontrado || puntero.siguiente() != null){
-                puntero = puntero.siguiente;
-                if(puntero.valor() == valor){
-                    encontrado = true;
-                }
-            }
+        while (puntero.siguiente != null){
+            puntero = puntero.siguiente;
             if (puntero.valor() == valor){
-                encontrado = true;
+                return true;
             }
         }
-        else{
-        System.out.println("La lista esta vacia.");
-            }
-        return encontrado;
+        return false;
     }
 
-
+    public void eliminar(int valor){
+        Nodo puntero = this.head;
+        Nodo anterior;
+        while (puntero.siguiente != null){
+            anterior = puntero;
+            puntero = puntero.siguiente;
+            if (puntero.valor() == valor){
+                anterior.siguiente = puntero.siguiente;
+                this.tamanio -= 1;
+                return;
+            }
+        }
+    }
 
 }
 
