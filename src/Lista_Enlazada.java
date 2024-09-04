@@ -9,7 +9,7 @@ public class Lista_Enlazada{
             puntero = puntero.siguiente;
         }
         Nodo nuevoNodo = new Nodo();
-        nuevoNodo.valor = valor;
+        nuevoNodo.Nodo(valor);
         puntero.siguiente = nuevoNodo;
         this.tamanio += 1;
 
